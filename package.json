@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "vue": "^3.2.35"
+  },
+  "name": "rudimetary-vuejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^2.9.9"
+  }
+}
