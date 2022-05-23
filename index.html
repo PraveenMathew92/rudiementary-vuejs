@@ -11,10 +11,20 @@
     <script type="module">
         import { createApp } from 'vue/dist/vue.esm-bundler.js'
         const app = createApp({
-            template: 'Thrice to thine and thrice to mine and thrice again to make it {{ msg }}.',
+            template: `Thrice to thine and thrice to mine and thrice again to make it {{ msg }}.
+            <br \><br \><br \>
+            {{ count }}
+            <button v-on:click="inc">COUNTER</button>`,
             data() {
                 return {
-                    msg: 'ten'
+                    msg: 'ten',
+                    count: 10
+                }
+            },
+            methods: {
+                inc() {
+                    this.count += 1;
+                    console.log(JSON.stringify(this));
                 }
             }
         })
