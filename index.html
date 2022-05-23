@@ -7,24 +7,31 @@
     <title>Hello VueJs</title>
 </head>
 <body>
-    <div id="app" />
+    <div>
+        <div id="app" />
+    </div>
     <script type="module">
         import { createApp } from 'vue/dist/vue.esm-bundler.js'
         const app = createApp({
             template: `Thrice to thine and thrice to mine and thrice again to make it {{ msg }}.
             <br \><br \><br \>
             {{ count }}
+            <div v-if="count"> EVEN </div>
+            <div v-else>NOT EVEN</div>
             <button v-on:click="inc">COUNTER</button>`,
             data() {
                 return {
                     msg: 'ten',
-                    count: 10
+                    count: 0
                 }
             },
             methods: {
                 inc() {
                     this.count += 1;
                     console.log(JSON.stringify(this));
+                },
+                isEven() {
+                    return this.count % 2 === 0;
                 }
             }
         })
