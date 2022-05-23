@@ -7,13 +7,11 @@
     <title>Hello VueJs</title>
 </head>
 <body>
-    <div id="app">
-        Thrice to thine and thrice to mine and thrice again to make it {{ msg }}.
-    </div>
+    <div id="app" />
     <script type="module">
         import { createApp } from 'vue/dist/vue.esm-bundler.js'
-
         const app = createApp({
+            template: 'Thrice to thine and thrice to mine and thrice again to make it {{ msg }}.',
             data() {
                 return {
                     msg: 'ten'
