@@ -16,13 +16,22 @@
             template: `Thrice to thine and thrice to mine and thrice again to make it {{ msg }}.
             <br \><br \><br \>
             {{ count }}
+            
             <div v-if="count"> EVEN </div>
             <div v-else>NOT EVEN</div>
-            <button v-on:click="inc">COUNTER</button>`,
+            
+            <button v-on:click="inc">COUNTER</button>
+            
+            <br \><br \><br \>
+            Words in arr: 
+            <div v-for="word in arr">
+                {{ word }}
+            </div>`,
             data() {
                 return {
                     msg: 'ten',
-                    count: 0
+                    count: 0,
+                    arr: ["hello", "echo", "turbo"]
                 }
             },
             methods: {
